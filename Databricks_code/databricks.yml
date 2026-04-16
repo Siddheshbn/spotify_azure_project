@@ -1,0 +1,21 @@
+bundle:
+    name: spotify_dab
+    uuid: e2d1871f-019e-4f8a-bd48-8a52531a7891
+
+targets:
+    dev:
+        mode: development
+        default: true
+        workspace:
+            host: <redacted>
+        presets:
+            source_linked_deployment: false
+
+    prod:
+        mode: production
+        workspace:
+            host: <redacted>
+            root_path: /Workspace/PROD/.bundle/${bundle.name}/${bundle.target}
+        permissions:
+            - user_name: sidiit007@gmail.com
+              level: CAN_MANAGE
